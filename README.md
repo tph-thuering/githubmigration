@@ -3,11 +3,17 @@ Tools for github wiki migration from google code
 
 # Requirements
 python
+bash
 
-# Example Usage
+# anchor-converter -> Example Usage
 `$ echo 'GCodeStyle#Anchor_(with_paranthesis)' | ./gcode2githubwiki-anchor.py 
 gcodestyle#anchor-with-paranthesis
 `
 
-Use accordingly with your bash-scripts or so... (I used some sed-oneliners)
+# extract wiki-links -> Example Usage
+```
+$ cd openmalaria.wiki
+$ ../githubmigration/extract-wiki-links.bash
+```
 
+This script will extract all wiki-style links from files with .md ending an put the links separated by newlines into /tmp/all-links.md
