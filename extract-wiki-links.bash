@@ -1,7 +1,8 @@
 #!/bin/bash
 
+FILES=$(ls -1 *.md | grep -v ^Generated)
 # extract all lines with links in them
-grep '\[.*\]\(.*\)' *.md > /tmp/all-links.md
+grep '\[.*\]\(.*\)' ${FILES} > /tmp/all-links.md
 # append newline to end of link construct
 sed -i 's/)/)\n/g' /tmp/all-links.md
 # prepend newline to start of link construct
